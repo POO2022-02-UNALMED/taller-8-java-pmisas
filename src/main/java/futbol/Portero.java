@@ -19,13 +19,7 @@ public class Portero extends Futbolista{
         this.golesRecibidos = golesRecibidos;
         this.dorsal = dorsal;
     }
-
-    @Override
-    public String toString() {
-        return super.toString()+
-                " con el dorsal " + dorsal +
-                ". Le han marcado " + golesRecibidos;
-    }
+ 
         
     @Override
     boolean jugarConLasManos() {
@@ -37,4 +31,12 @@ public class Portero extends Futbolista{
         if (!(o instanceof Portero)) return 0;
         return Math.abs(((Portero) o).golesRecibidos-this.golesRecibidos);
     }  
+    
+    
+    @Override
+    public String toString() {
+        return super.toString()+
+                " con el dorsal " + dorsal +
+                ". Le han marcado " + golesRecibidos;
+    }      
 }

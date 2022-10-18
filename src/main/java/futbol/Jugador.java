@@ -13,28 +13,31 @@ public class Jugador extends Futbolista{
     public short golesMarcados;
     public byte dorsal;
 
-    public Jugador(short golesMarcados, byte dorsal, String nombre, int edad, String posicion) {
-        super(nombre, edad, posicion);
-        this.golesMarcados = golesMarcados;
-        this.dorsal = dorsal;
-    }
-
-    public Jugador() {
+        public Jugador() {
         super();
         this.golesMarcados = 289;
         this.dorsal = 7;
     }
     
+    public Jugador(String nombre, int edad, String pocicion, short golesMarcados, byte dorsal) {
+        super(nombre, edad, pocicion);
+        this.golesMarcados = golesMarcados;
+        this.dorsal = dorsal;
+    }
+
+
+    
     public String toString() {
-        return super.toString()+
+        return "El futbolista " + super.getNombre() +
+                " tiene " + super.getEdad() +
+                ", y juega de " + super.getPosicion() +
                 " con el dorsal " + dorsal +
                 ". Ha marcado " + golesMarcados;
     }
     
 
     
-    
-    
+   
     
     @Override
     boolean jugarConLasManos() {

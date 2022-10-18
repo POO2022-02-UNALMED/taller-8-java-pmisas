@@ -32,7 +32,7 @@ public class Portero extends Futbolista{
         
     @Override
     boolean jugarConLasManos() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return true;
     }
 
     @Override
